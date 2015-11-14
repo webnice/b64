@@ -148,7 +148,7 @@ func BenchmarkB64MarshalStringAllBits(b *testing.B) {
 	var vt uint64 = 0xFFFFFFFFFFFFFFFF
 	obj := newUint64(vt)
 	for i := 0; i < b.N; i++ {
-		obj.String()
+		_ := obj.String()
 	}
 }
 
@@ -156,7 +156,7 @@ func BenchmarkB64MarshalStringOneBits(b *testing.B) {
 	var vt uint64 = 0x1
 	obj := newUint64(vt)
 	for i := 0; i < b.N; i++ {
-		obj.String()
+		_ := obj.String()
 	}
 }
 

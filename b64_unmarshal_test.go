@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestNewString(t *testing.T) {
+func TestInit(t *testing.T) {
 	if len(encodeBase) != 64 {
 		t.Errorf("Error len(encodeBase)")
 		return
@@ -17,7 +17,9 @@ func TestNewString(t *testing.T) {
 		t.Errorf("Error in init()")
 		return
 	}
+}
 
+func TestNewString(t *testing.T) {
 	a := newString(``)
 	if a.Error() != nil {
 		t.Errorf("Error in Error()")

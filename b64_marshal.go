@@ -8,63 +8,63 @@ func init() {
 	}
 }
 
-func newUint64(num uint64) (ret *b64Marshal) {
-	ret = new(b64Marshal)
-	ret.SourceUint64 = num
+func newUint64(num uint64) (b64m *b64Marshal) {
+	b64m = new(b64Marshal)
+	b64m.SourceUint64 = num
 	return
 }
 
-func newInt64(num int64) (ret *b64Marshal) {
-	ret = new(b64Marshal)
-	ret.SourceUint64 = uint64(num)
+func newInt64(num int64) (b64m *b64Marshal) {
+	b64m = new(b64Marshal)
+	b64m.SourceUint64 = uint64(num)
 	return
 }
 
-func (self *b64Marshal) Uint64() uint64 {
-	return self.SourceUint64
+func (b64m *b64Marshal) Uint64() uint64 {
+	return b64m.SourceUint64
 }
 
-func (self *b64Marshal) Int64() int64 {
-	return int64(self.SourceUint64)
+func (b64m *b64Marshal) Int64() int64 {
+	return int64(b64m.SourceUint64)
 }
 
-func (self *b64Marshal) Error() error {
+func (b64m *b64Marshal) Error() error {
 	return nil
 }
 
-func (self *b64Marshal) convertFromUint64() *b64Marshal {
-	var tmp uint64 = self.SourceUint64
+func (b64m *b64Marshal) convertFromUint64() *b64Marshal {
+	var tmp = b64m.SourceUint64
 	for i := 0; i <= 10; i++ {
 		if tmp != 0 {
-			self.Bytes[i] = mapBase[int(mask6bit&tmp)]
+			b64m.Bytes[i] = mapBase[int(mask6bit&tmp)]
 		} else {
-			self.Bytes[i] = mapBase[0]
+			b64m.Bytes[i] = mapBase[0]
 		}
 		tmp = tmp >> 6
 	}
-	return self
+	return b64m
 }
 
-func (self *b64Marshal) String() (ret string) {
+func (b64m *b64Marshal) String() (ret string) {
 	var i, n int
-	var skeep bool = true
+	var skeep = true
 	var tmp [11]byte
-	self.convertFromUint64()
+	b64m.convertFromUint64()
 	for i = 10; i >= 0; i-- {
-		if self.Bytes[i] != mapBase[0] && skeep == true {
+		if b64m.Bytes[i] != mapBase[0] && skeep == true {
 			skeep = false
 		}
 		if skeep && i != 0 {
 			continue
 		} else {
-			tmp[n] = self.Bytes[i]
-			n += 1
+			tmp[n] = b64m.Bytes[i]
+			n++
 		}
 	}
 	ret = string(tmp[:n])
 	return
 }
 
-func (self *b64Marshal) Bits() string {
-	return toBits(self.SourceUint64)
+func (b64m *b64Marshal) Bits() string {
+	return toBits(b64m.SourceUint64)
 }

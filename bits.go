@@ -12,18 +12,18 @@ func toBits(n uint64) string {
 	return string(bytes[:])
 }
 
-func unsetBit(n uint64, pos uint) uint64 {
-	mask := ^(uint64(1) << pos)
-	n &= mask
-	return n
-}
+//func unsetBit(n uint64, pos uint) uint64 {
+//	mask := ^(uint64(1) << pos)
+//	n &= mask
+//	return n
+//}
 
-func setBit(n uint64, pos uint) uint64 {
-	n |= (1 << pos)
-	return n
-}
+//func setBit(n uint64, pos uint) uint64 {
+//	n |= (1 << pos)
+//	return n
+//}
 
-func isBit(n uint64, pos uint) bool {
-	val := n & (1 << pos)
-	return (val > 0)
-}
+//func isBit(n uint64, pos uint) bool {
+//	val := n & (1 << pos)
+//	return (val > 0)
+//}
