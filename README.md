@@ -1,4 +1,9 @@
-# b64 [![Build Status](https://drone.io/github.com/webdeskltd/b64/status.png)](https://drone.io/github.com/webdeskltd/b64/latest) [![Travis status](https://travis-ci.org/webdeskltd/b64.svg?branch=master "travis status")](https://travis-ci.org/webdeskltd/b64/#) [![GoDoc](https://godoc.org/github.com/webdeskltd/b64?status.png)](http://godoc.org/github.com/webdeskltd/b64)
+##### Build status
+*nix: [![Build Status](https://drone.io/github.com/webdeskltd/b64/status.png)](https://drone.io/github.com/webdeskltd/b64/latest) [![Travis status](https://travis-ci.org/webdeskltd/b64.svg?branch=master "travis status")](https://travis-ci.org/webdeskltd/b64/#) [![GoDoc](https://godoc.org/github.com/webdeskltd/b64?status.png)](http://godoc.org/github.com/webdeskltd/b64)
+
+windows: [![Build status](https://ci.appveyor.com/api/projects/status/u6auhkxmr54alibm/branch/master?svg=true)](https://ci.appveyor.com/project/monoflash/b64/branch/master)
+
+# b64
 
 Go library convert Int64 or Uint64 variable to string(11 symbols), and convert 11 symbols string back to int64 or uint64
 
