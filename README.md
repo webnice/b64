@@ -4,6 +4,8 @@ Go library convert Int64 or Uint64 variable to string(11 symbols), and convert 1
 
 ### What is it?
 Library converts a single intenger to a string of 1 to 11 characters. Conversion is to reduce number characters when writing a long string of numbers.
-Example: 1048575 (7 symbols) -> "D___" (4 symbols)
+
+Example: `1048575 (7 symbols) -> "D___" (4 symbols)`
+
 Yes, it is a regular base64 for use in a URL, but it works faster than the standard library "encoding/base64"
 And it made a little more comfortable when using a conversion of only one number
