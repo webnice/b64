@@ -19,7 +19,7 @@ And it made a little more comfortable when using a conversion of only one number
 	import "github.com/webdeskltd/b64"
 
 	func main() {
-	    o := b64.NewMarshalUint64(10485251)
+	    o := b64.NewUint64(10485251)
 	    print(o.String(), "\n")
     	print(o.Uint64(), "\n")
 	}
@@ -37,7 +37,7 @@ Result:
 	import "github.com/webdeskltd/b64"
 	
 	func main() {
-		obj := b64.NewUnmarshalString("P____A____1")
+		obj := b64.NewString("P____A____1")
 		if obj.Error() != nil {
 			panic(obj.Error())
 		}

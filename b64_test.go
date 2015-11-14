@@ -4,9 +4,9 @@ import (
 	"testing"
 )
 
-func TestNewMarshalUint64(t *testing.T) {
+func TestNewUint64Public(t *testing.T) {
 	var o B64
-	o = NewMarshalUint64(0xFFFFFFFFFFFFFFFF)
+	o = NewUint64(0xFFFFFFFFFFFFFFFF)
 	if o == nil {
 		t.Errorf("Error in NewMarshalUint64()")
 	}
@@ -24,9 +24,9 @@ func TestNewMarshalUint64(t *testing.T) {
 	}
 }
 
-func TestNewMarshalInt64(t *testing.T) {
+func TestNewInt64Public(t *testing.T) {
 	var o B64
-	o = NewMarshalInt64(-1)
+	o = NewInt64(-1)
 	if o == nil {
 		t.Errorf("Error in NewMarshalInt64()")
 	}
@@ -35,9 +35,9 @@ func TestNewMarshalInt64(t *testing.T) {
 	}
 }
 
-func TestNewUnmarshalString(t *testing.T) {
+func TestNewStringPublic(t *testing.T) {
 	var o B64
-	o = NewUnmarshalString(`1`)
+	o = NewString(`1`)
 	if o == nil {
 		t.Errorf("Error in NewUnmarshalString()")
 	}

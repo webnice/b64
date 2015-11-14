@@ -34,21 +34,21 @@ type (
 	}
 )
 
-func NewMarshalUint64(inp uint64) B64 {
+func NewUint64(inp uint64) B64 {
 	var resp = []B64{
 		newUint64(inp),
 	}
 	return resp[0]
 }
 
-func NewMarshalInt64(inp int64) B64 {
+func NewInt64(inp int64) B64 {
 	var resp = []B64{
 		newInt64(inp),
 	}
 	return resp[0]
 }
 
-func NewUnmarshalString(inp string) B64 {
+func NewString(inp string) B64 {
 	var resp = []B64{
 		newString(inp),
 	}
