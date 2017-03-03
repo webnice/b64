@@ -1,13 +1,7 @@
-##### Build status
-[![GoDoc](https://godoc.org/github.com/webnice/b64?status.png)](http://godoc.org/github.com/webnice/b64)
-[![Coverage Status](https://coveralls.io/repos/webnice/b64/badge.svg?branch=v1&service=github)](https://coveralls.io/github/webnice/b64?branch=v1)
-*nix: [![Build Status](https://drone.io/github.com/webnice/b64/status.png)](https://drone.io/github.com/webnice/b64/latest) [![Travis status](https://travis-ci.org/webnice/b64.svg?branch=v1 "travis status")](https://travis-ci.org/webnice/b64/#)
-[![Circle CI](https://circleci.com/gh/webnice/b64/tree/v1.svg?style=svg)](https://circleci.com/gh/webnice/b64/tree/v1)
-win: [![Build status](https://ci.appveyor.com/api/projects/status/u6auhkxmr54alibm/branch/v1?svg=true)](https://ci.appveyor.com/project/webnice/b64/branch/v1)
-
 # b64
-
 Go library convert Int64 or Uint64 variable to string(11 symbols), and convert 11 symbols string back to int64 or uint64
+
+[![GoDoc](https://godoc.org/github.com/webnice/b64?status.png)](http://godoc.org/github.com/webnice/b64)
 
 ### What is it?
 Library converts a single intenger to a string of 1 to 11 characters.
