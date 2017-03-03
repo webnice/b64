@@ -1,9 +1,9 @@
 ##### Build status
-[![GoDoc](https://godoc.org/github.com/webdeskltd/b64?status.png)](http://godoc.org/github.com/webdeskltd/b64)
-[![Coverage Status](https://coveralls.io/repos/webdeskltd/b64/badge.svg?branch=master&service=github)](https://coveralls.io/github/webdeskltd/b64?branch=master)
-*nix: [![Build Status](https://drone.io/github.com/webdeskltd/b64/status.png)](https://drone.io/github.com/webdeskltd/b64/latest) [![Travis status](https://travis-ci.org/webdeskltd/b64.svg?branch=master "travis status")](https://travis-ci.org/webdeskltd/b64/#)
-[![Circle CI](https://circleci.com/gh/webdeskltd/b64/tree/master.svg?style=svg)](https://circleci.com/gh/webdeskltd/b64/tree/master)
-win: [![Build status](https://ci.appveyor.com/api/projects/status/u6auhkxmr54alibm/branch/master?svg=true)](https://ci.appveyor.com/project/monoflash/b64/branch/master)
+[![GoDoc](https://godoc.org/github.com/webnice/b64?status.png)](http://godoc.org/github.com/webnice/b64)
+[![Coverage Status](https://coveralls.io/repos/webnice/b64/badge.svg?branch=v1&service=github)](https://coveralls.io/github/webnice/b64?branch=v1)
+*nix: [![Build Status](https://drone.io/github.com/webnice/b64/status.png)](https://drone.io/github.com/webnice/b64/latest) [![Travis status](https://travis-ci.org/webnice/b64.svg?branch=v1 "travis status")](https://travis-ci.org/webnice/b64/#)
+[![Circle CI](https://circleci.com/gh/webnice/b64/tree/v1.svg?style=svg)](https://circleci.com/gh/webnice/b64/tree/v1)
+win: [![Build status](https://ci.appveyor.com/api/projects/status/u6auhkxmr54alibm/branch/v1?svg=true)](https://ci.appveyor.com/project/webnice/b64/branch/v1)
 
 # b64
 
@@ -23,7 +23,7 @@ And it made a little more comfortable when using a conversion of only one number
 ######Convert from number to string
 	package main
 
-	import "github.com/webdeskltd/b64"
+	import "gopkg.in/webnice/b64.v1"
 
 	func main() {
 	    o := b64.NewUint64(10485251)
@@ -40,9 +40,9 @@ Result:
 ######Convert from string to number
 
 	package main
-	
-	import "github.com/webdeskltd/b64"
-	
+
+	import "gopkg.in/webnice/b64.v1"
+
 	func main() {
 		obj := b64.NewString("P____A____1")
 		if obj.Error() != nil {
@@ -51,10 +51,19 @@ Result:
 		print(obj.Uint64(), "\n")
 		print(obj.Int64(), "\n")
 	}
-	
-Result: 
+
+Result:
 
 	18446744006063816693
 	-67645734923
 
 --
+
+#### Dependencies
+
+	NONE
+
+#### Install
+```bash
+go get gopkg.in/webnice/b64.v1
+```
